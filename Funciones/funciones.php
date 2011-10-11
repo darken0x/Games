@@ -18,8 +18,4 @@
 		return $rBaseDatos;
 	}
 
-	function fSelecciona($tabla,$cam001,$cam002){
-		$rSelecciona = "select * from $tabla where $cam001 = $cam002";
-		return $rSelecciona;
-	}
 ?>

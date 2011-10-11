@@ -5,10 +5,10 @@
 	if ($basedatos == 1)
 	{
 		$sql = " SELECT ";
-		$sql = $sql . " ID_STATUS ";
+		$sql = $sql . " ID_CONSOLE ";
 		$sql = $sql . " , DESCRIPTION ";
-		$sql = $sql . " FROM C_STATUS ";
-		$rsStatus = mssql_query($sql);
+		$sql = $sql . " FROM C_CONSOLE ";
+		$rsConsolas = mssql_query($sql);
 	}
 
 	mssql_close($sqlcon);
@@ -17,15 +17,15 @@
 <table width='100%'>
 	<thead>
 		<tr>
-			<th width='20%'>ID STATUS</th>
-			<th width='80%'>DESCRIPTION</th>
+			<th width='20%'>ID</th>
+			<th width='80%'>DESCRIPCION</th>
 		</tr>
     </thead>
     <tfoot>
 	    <tr>
 			<td>&nbsp;</td>
 	      	<td align='right' style='cursor:pointer;'>
-	      		<span onClick='fInsertStatus();'>
+	      		<span onClick='fInsertConsolas();'>
 	      			Agregar
 	      		</span>
 	      	</td>
@@ -33,12 +33,12 @@
   	</tfoot>
     <tbody>
 <?php
-		if (mssql_num_rows($rsStatus) > 0)
-		{			while($colStatus = mssql_fetch_assoc($rsStatus))
+		if (mssql_num_rows($rsConsolas) > 0)
+		{			while($colConsolas = mssql_fetch_assoc($rsConsolas))
 			{?>
      			<tr>
-     				<td><?php echo $colStatus["ID_STATUS"]; ?></td>
-     				<td><?php echo $colStatus["DESCRIPTION"]; ?></td>
+     				<td><?php echo $colConsolas["ID_CONSOLE"]; ?></td>
+     				<td><?php echo $colConsolas["DESCRIPTION"]; ?></td>
      			</tr>
 <?php
 			}

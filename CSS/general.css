@@ -1,0 +1,30 @@
+
+.menu
+{
+	background-color: #686767;
+}
+
+body
+{
+	background-color: #00045F;
+
+}
+table
+{	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	color: #E0DEDE;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+	height:100%;
+	width:100%;
+
+}
+
+input
+{	-webkit-box-shadow: 1px 1px 1px 1px rgba(200, 200, 200, .5);
+	-moz-box-shadow: 1px 1px 1px 1px rgba(200, 200, 200, .5);
+	box-shadow: 1px 1px 1px 1px rgba(200, 200, 200, .5);
+}
